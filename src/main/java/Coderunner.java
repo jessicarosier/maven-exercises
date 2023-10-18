@@ -7,11 +7,16 @@ public class Coderunner {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Give me a string:");
+        System.out.println("Enter something:");
         String input = sc.nextLine();
-        System.out.println(StringUtils.isNumeric(input));
-        System.out.println(StringUtils.upperCase(input));
-        System.out.println(StringUtils.reverse(input));
+        System.out.printf("You Entered: %s%n",input);
+
+        if (!StringUtils.isNumeric(input)) {
+            System.out.printf("%s is not a number.%n", input);
+        }
+
+        System.out.printf("Flipped Case: %s%n",StringUtils.swapCase(input));
+        System.out.printf("Reversed: %s%n",StringUtils.reverse(input));
 
 
 
